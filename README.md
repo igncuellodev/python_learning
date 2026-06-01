@@ -9,6 +9,13 @@ A simple, robust CLI (Command Line Interface) application to handle user registr
 - **Language:** Python 3.x
 - **Version Control:** Git & GitHub
 
+## Concepts learned
+
+-- **Variables**
+-- **Loops**
+-- **Functions**
+-- **if, else, elif and while**
+
 ## 🚀 How to Run
 
 1. Clone the repository:

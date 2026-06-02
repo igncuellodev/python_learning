@@ -21,6 +21,7 @@
 
 
 
+<<<<<<< HEAD
 #Excercise 03
 
 #kid_01 = int(input("Write the age of the first kid:\n"))
@@ -39,3 +40,8 @@
 #    print("niño 01 es algo mayor que niño 02")
 
 
+=======
+
+
+#Excercise 03
+>>>>>>> 7e20b87 (Saving my progress before pulling)

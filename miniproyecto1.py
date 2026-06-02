@@ -1,17 +1,46 @@
-#Debe generar un numero de 1 a 100 aleatorio y debe guardarse
-#El programa solicita el nombre del usuario y lo guarda
-#
-
 import random
-numero_aleatorio = random.randint(1,100)
-nombre_de_usuario = input("Introduce tú nombre:\n")
-introducir_numero = int(input("Introduce un número para empezar a adivinar (Presiona 0, para terminar juego):\n"))
-intentos_del_usuario = 0
+numero_random = random.randint(1,100)
+print(numero_random)
+nombre_user = input("Dinos tu nombre, antes de empezar:\n")
+user_num = int(input("Ingresa el numero que crees que es (0 para parar):\n"))
+intentos = 0
 
-if introducir_numero == 0:
-    intentos_del_usuario = intentos_del_usuario + 1
-    print("No lo lograste a pesar de intentar " + str(intentos_del_usuario) + " veces")
+while user_num != numero_random:
+        intentos = intentos + 1
+
+        #Fin del juego
+        if user_num == 0:
+            print("No lo lograste a pesar de tratar " + str(intentos) + " veces" ".Mas suerte para otra vez")
+            break
+        #Fin del juego
 
 
-else:
-    print("Ese no es el numero")
+
+
+        #Intervalo de 5
+        if user_num > numero_random and user_num - numero_random <= 5:
+            print("Sorry " + nombre_user + ", ese no es pero estas a una distancia menor a 5")
+            user_num = int(input("Ingresa el numero que crees que es (0 para parar):\n"))
+
+        elif user_num < numero_random and numero_random - user_num <= 5:
+              print("Sorry " + nombre_user + ", ese no es pero estas a una distancia menor a 5")
+              user_num = int(input("Ingresa el numero que crees que es (0 para parar):\n"))
+
+        #Intervalo de 5
+
+
+        if user_num > numero_random and user_num - numero_random <= 10:
+              print("Sorry " + nombre_user + ", ese no es pero estas a una distancia mayor a 5 y menor que 10")
+              user_num = int(input("Ingresa el numero que crees que es (0 para parar):\n"))
+
+
+        elif user_num < numero_random and numero_random - user_num <= 10:
+              print("Sorry " + nombre_user + ", ese no es pero estas a una distancia mayor a 5 y menor que 10")
+              user_num = int(input("Ingresa el numero que crees que es (0 para parar):\n"))
+              
+
+
+
+if user_num == numero_random:
+       intentos = intentos + 1
+       print("Felicitaciones " + nombre_user + ", lo lograste en " + str(intentos) + " intentos")

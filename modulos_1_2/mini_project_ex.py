@@ -54,3 +54,29 @@ if user_savings >= savings_goal:
     print("You achieved, your saving goal: " + str(savings_goal) + " dollars " + "in " + str(days) + " days.") 
     print("You have a total of " + str(user_savings))
 
+
+
+info = open("ahorros.txt", "a", encoding = "UTF-8")
+
+
+lista = ["Ignacio", "Juan", "Pedro", "Hola"]
+
+
+añadir_elemento = input("Introduce un nombre que quieras agregar a la lista:\n")
+
+
+info.write(añadir_elemento)
+
+
+if True:
+    print(f"Haz escrito correctame {lista[1]} en el archivo de texto")
+
+
+info.close()
+
+
+
+
+
+
+
